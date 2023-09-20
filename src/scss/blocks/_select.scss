@@ -1,0 +1,74 @@
+.custom-select-container {
+  position: relative;
+  box-sizing: border-box;;
+}
+.custom-select-container * {
+  box-sizing: border-box;
+}
+.custom-select-container.is-disabled {
+  opacity: .333;
+}
+.custom-select-opener {
+  position: relative;
+  background-color: #fff;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-align: center;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 19px;
+    height: 9px;
+    right: 9px;
+    transform: translateY(-50%);
+    top: 50%;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.custom-select-opener span {
+  color: #2C2B31;
+  font-size: 21.69px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.custom-select-container select {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.custom-select-panel {
+  max-height: 0;
+  transition: max-height .5s ease-out, overflow-y 0.1s 0.5s;
+  background-color: #fff;
+  position: absolute;
+  top: 85%;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  height: 110px;
+  overflow: auto;
+}
+.custom-select-container.is-open .custom-select-panel {
+  max-height: 10.7em;
+  overflow-y: auto
+}
+.custom-select-option {
+  font-size: 18px;
+  padding: 0.5em;
+}
+.custom-select-option.has-focus {
+  background-color: #F0F0F0;
+}
+
+.custom-select-option.is-selected {
+  font-weight: 500;
+}

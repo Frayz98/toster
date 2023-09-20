@@ -1,0 +1,30 @@
+.header__top {
+  padding: 11px 14px;
+  background-color: $orange-color;
+  p {
+    color: #2C2B31;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.header__bottom {
+  background-color: #FFD1AC;
+  padding: 19px 86px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+
+  p {
+    color: #2C2B31;
+    text-align: center;
+    font-size: 13.469px;
+    font-weight: 400;
+  }
+}
+
+
